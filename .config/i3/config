@@ -15,10 +15,24 @@ focus_follows_mouse no
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return 		exec --no-startup-id st -e /usr/bin/zsh
+# brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/screen-brightness up 0.1
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/screen-brightness down 0.1
 
-bindsym $mod+q			    exec --no-startup-id i3lock-fancy -f
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left 		    exec --no-startup-id $HOME/scripts/screen-brightness down 0.1
+#bindsym $mod+Shift+Left move left
+bindsym $mod+Right 		    exec --no-startup-id $HOME/scripts/screen-brightness up 0.1
+#bindsym $mod+Shift+Right move right
+bindsym $mod+Down 		focus down
+#bindsym $mod+Shift+Down move down
+bindsym $mod+Up 		focus up
+#bindsym $mod+Shift+Up move up
+
+# start a terminal
+bindsym $mod+Return 		exec --no-startup-id st -e /bin/bash
+
+bindsym $mod+q			    exec --no-startup-id my-i3lock
 bindsym $mod+Shift+q 		kill
 
 bindsym $mod+w			    exec --no-startup-id wireshark
@@ -73,16 +87,6 @@ bindsym $mod+Shift+l 		move right
 bindsym $mod+b			    exec --no-startup-id google-chrome
 bindsym $mod+Shift+b		exec --no-startup-id firefox
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left 		focus left
-bindsym $mod+Shift+Left move left
-bindsym $mod+Down 		focus down
-bindsym $mod+Shift+Down move down
-bindsym $mod+Up 		focus up
-bindsym $mod+Shift+Up move up
-bindsym $mod+Right 		focus right
-bindsym $mod+Shift+Right move right
-
 # TODO
 # split in horizontal orientation
 #bindsym $mod+h split h
@@ -99,6 +103,7 @@ bindsym $mod+f fullscreen toggle
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
 
+bindsym $mod+z   		exec pkill telegram
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
