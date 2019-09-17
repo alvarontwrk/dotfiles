@@ -1,2 +1,2 @@
-xinput set-prop 12 275 1 # Enables Touchpad Tapping
+enable-touchpad
 exec i3 # Starts i3
