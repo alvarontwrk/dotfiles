@@ -30,7 +30,7 @@ bindsym $mod+Up 		focus up
 #bindsym $mod+Shift+Up move up
 
 # start a terminal
-bindsym $mod+Return 		exec --no-startup-id st -e /bin/bash
+bindsym $mod+Return 		exec --no-startup-id dbus-launch gnome-terminal
 
 bindsym $mod+q			    exec --no-startup-id my-i3lock
 bindsym $mod+Shift+q 		kill
