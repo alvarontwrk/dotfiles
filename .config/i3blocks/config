@@ -22,15 +22,21 @@
 # urgent
 
 command=/usr/share/i3blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=20
 markup=pango
+separator=false
 
 [wifiname]
 label=📶
 command=/home/alvaro/scripts/wifiname
 interval=5
 
+[iface]
+label=🔗
+interval=5
+
 [battery]
+label=🔋
 interval=5
 
 [volume]
@@ -38,5 +44,6 @@ label=🔈
 interval=5
 
 [time]
-command=date "+%a, %b %_d %Y %I:%M%P"
+label=📅
+command=date "+%A, %b %_d %Y %H:%M"
 interval=5
