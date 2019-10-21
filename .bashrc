@@ -79,7 +79,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
+    alias grep='grep --color=auto'
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
 fi
@@ -98,7 +98,7 @@ alias assign="tail -1|tee _T1>/dev/null&&printf \"export \\\$1=\$(cat _T1)\nrm _
 alias dai="sudo docker-compose run ejercicios"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gnome-terminal='dbus-launch gnome-terminal'
-
+alias copy='xclip -sel clip'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -126,5 +126,4 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export GOPATH=/home/alvaro/.gocode
 export BW_SESSION='null'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(rbenv init -)"
