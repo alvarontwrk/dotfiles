@@ -32,7 +32,7 @@ bindsym $mod+Up 		focus up
 # start a terminal
 bindsym $mod+Return 		exec --no-startup-id dbus-launch gnome-terminal
 
-bindsym $mod+q			    exec --no-startup-id my-i3lock
+bindsym $mod+q			    exec --no-startup-id $HOME/scripts/my-i3lock
 bindsym $mod+Shift+q 		kill
 
 bindsym $mod+w			    exec --no-startup-id wireshark
@@ -73,6 +73,9 @@ bindsym $mod+s			    exec --no-startup-id spotify
 bindsym $mod+d 			    exec --no-startup-id dmenu_run
 #bindsym $mod+Shift+d 		
 
+bindsym $mod+g 			    exec --no-startup-id gimp
+#bindsym $mod+Shift+g 		
+#
 # change focus
 bindsym $mod+h 			    focus left
 bindsym $mod+Shift+h		move left
@@ -84,8 +87,8 @@ bindsym $mod+l 			    focus right
 bindsym $mod+Shift+l 		move right
 
 
-bindsym $mod+b			    exec --no-startup-id google-chrome
-bindsym $mod+Shift+b		exec --no-startup-id firefox
+bindsym $mod+Shift+b	    exec --no-startup-id google-chrome
+bindsym $mod+b		        exec --no-startup-id firefox
 
 # TODO
 # split in horizontal orientation
@@ -188,70 +191,27 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks
-	font pango:Noto Sans, Bold 10
-	position top
-	colors {
-		background #000014
-		#statusline $black
-		#separator $cyan
-		#focused_workspace  $blue $darkblue $darkblack
-		#active_workspace   $blue $blue $darkwhite
-		#inactive_workspace $darkblack $darkblack $white
-		#urgent_workspace   $darkblack $darkblack $white
-	}
+    status_command i3blocks
+    strip_workspace_numbers yes
+    position top
+    font pango:Noto Sans, Bold 9
+    colors {
+        statusline #E6FFF5
+        background #2A2A2A
+        separator #FFFFFF
+#                            BORDER    BG        FG
+        focused_workspace  #8BC7EF   #8BC7EF   #000000
+        inactive_workspace #2A2A2A   #2A2A2A   #888888
+        urgent_workspace   #F58181   #F58181   #000000
+        binding_mode       #000000   #000000   #000000
+    }
 }
-
-### i3-gaps stuff ###
-
-# Necessary for i3-gaps to work properly (pixel can be any value)
+#### i3-gaps stuff ###
+#
+## Necessary for i3-gaps to work properly (pixel can be any value)
 for_window [class="^.*"] border pixel 3
 
-# Smart Gaps
-#smart_gaps on
-
-# Smart Borders
-smart_borders on
-
-# Set inner/outer gaps
-gaps inner 8
-gaps outer 0
-
-# Gaps mode
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# class                 border  backgr. text    indicator child_border 
+client.focused          #094987 #094987 #094987 #094987 #094987
+client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #063340
+client.unfocused        #0d1010 #212121 #d9d9d9 #424242 #063340
