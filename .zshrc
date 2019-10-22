@@ -21,7 +21,6 @@ CASE_SENSITIVE="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source .zshrc.pre-oh-my-zsh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
