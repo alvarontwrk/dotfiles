@@ -206,9 +206,8 @@ bar {
         binding_mode       #000000   #000000   #000000
     }
 }
-#### i3-gaps stuff ###
-#
-## Necessary for i3-gaps to work properly (pixel can be any value)
+#### borders stuff ###
+hide_edge_borders smart
 for_window [class="^.*"] border pixel 3
 
 # class                 border  backgr. text    indicator child_border 
