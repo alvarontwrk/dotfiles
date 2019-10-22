@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'vim-scripts/indentpython.vim'
 call plug#end()
 
 filetype plugin indent on
