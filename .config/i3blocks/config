@@ -26,6 +26,10 @@ separator_block_width=20
 markup=pango
 separator=false
 
+#[openvpn]
+#label=🖧
+#interval=5
+
 [wifiname]
 label=📶
 command=/home/alvaro/scripts/wifiname
