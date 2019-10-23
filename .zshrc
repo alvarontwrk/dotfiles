@@ -22,12 +22,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-else
-    export EDITOR='mvim'
-fi
+# Preferred editor
+export EDITOR='vim'
 
 export MYVIMRC='~/.vimrc'
 
@@ -108,3 +104,11 @@ alias copy='xclip -sel clip'
 config() {
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
 }
+
+# Check for dotfiles repo remote url
+configrepo=$(config remote -v)
+
+if [[ "$configrepo" == *"https"* ]]; then
+  echo "WARNING: Your dotfiles local repo connects to the server through https.\
+ Maybe you should change that for ssh"
+fi
