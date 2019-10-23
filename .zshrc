@@ -94,6 +94,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load aliases and shortcuts if existent.
+# TODO
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 alias ls='ls --color=auto'
@@ -101,9 +102,9 @@ alias mkcd='. mkcd'
 alias sx='startx'
 alias assign="tail -1|tee _T1>/dev/null&&printf \"export \\\$1=\$(cat _T1)\nrm _T*\">_T2&&. _T2"
 alias dai="sudo docker-compose run ejercicios"
-alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='xclip -sel clip'
 
-# Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+config() {
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
+}
