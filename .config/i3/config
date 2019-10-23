@@ -87,8 +87,8 @@ bindsym $mod+l 			    focus right
 bindsym $mod+Shift+l 		move right
 
 
-bindsym $mod+Shift+b	    exec --no-startup-id google-chrome
 bindsym $mod+b		        exec --no-startup-id firefox
+bindsym $mod+Shift+b	    exec --no-startup-id chromium
 
 # TODO
 # split in horizontal orientation
