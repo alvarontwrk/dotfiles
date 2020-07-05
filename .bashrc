@@ -99,6 +99,8 @@ alias dai="sudo docker-compose run ejercicios"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='xclip -sel clip'
+alias cat='bat'
+alias vim='nvim'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
