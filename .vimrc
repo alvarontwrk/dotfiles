@@ -9,8 +9,9 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+"Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'vim-scripts/indentpython.vim'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 filetype plugin indent on
@@ -21,8 +22,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set clipboard=unnamedplus "clipboard sync with system's
+set ignorecase
 autocmd VimLeave * call system("xclip -selection clipboard -i", getreg('+')) "prevent vim from clearing clipboard on exit
-set textwidth=80
+"set textwidth=80
 let g:airline_theme='cobalt2'
 let g:airline_theme='papercolor'
 let &t_EI.="\e[1 q" "EI = NORMAL mode
