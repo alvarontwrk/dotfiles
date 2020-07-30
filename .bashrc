@@ -101,6 +101,7 @@ alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='xclip -sel clip'
 alias cat='bat'
 alias vim='nvim'
+alias pyhttp='python3 -m http.server'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
