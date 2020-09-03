@@ -102,6 +102,10 @@ alias copy='xclip -sel clip'
 alias cat='bat'
 alias vim='nvim'
 alias pyhttp='python3 -m http.server'
+alias gd='git diff'
+alias ga='git add'
+alias gs='git status'
+alias gc='git commit'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

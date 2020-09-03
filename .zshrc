@@ -100,6 +100,7 @@ alias assign="tail -1|tee _T1>/dev/null&&printf \"export \\\$1=\$(cat _T1)\nrm _
 alias dai="sudo docker-compose run ejercicios"
 alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='xclip -sel clip'
+alias cat='bat'
 
 config() {
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
