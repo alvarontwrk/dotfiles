@@ -34,7 +34,7 @@ if [[ -n $DISPLAY ]];
 then
     #PROMPT = (etc)
 else 
-   PS1='$'
+   PS1='$ '
 fi
 
 # History in cache directory:
@@ -101,7 +101,7 @@ alias dai="sudo docker-compose run ejercicios"
 alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='xclip -sel clip'
 alias ncat='/usr/bin/cat'
-alias cat='bat'
+alias cat='batcat'
 alias vim='nvim'
 
 config() {
