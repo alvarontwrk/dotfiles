@@ -26,13 +26,14 @@ separator_block_width=20
 markup=pango
 separator=false
 
-#[openvpn]
-#label=🖧
-#interval=5
-
 [wifiname]
 label=📶
 command=/home/alvaro/scripts/wifiname
+interval=5
+
+[openvpn]
+label=🌐
+command=/home/alvaro/scripts/get-vpn-ip
 interval=5
 
 [iface]
