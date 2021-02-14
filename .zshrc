@@ -23,7 +23,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor
-export EDITOR='vim'
+export EDITOR='nvim'
 
 export MYVIMRC='~/.vimrc'
 
@@ -103,6 +103,7 @@ alias copy='xclip -sel clip'
 alias ncat='/usr/bin/cat'
 alias cat='batcat'
 alias vim='nvim'
+alias oscplab='sudo openvpn --config ~/oscp/lab/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 
 config() {
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
