@@ -30,7 +30,7 @@ bindsym $mod+Up 		focus up
 #bindsym $mod+Shift+Up move up
 
 # start a terminal
-bindsym $mod+Return 		exec --no-startup-id dbus-launch gnome-terminal
+bindsym $mod+Return 		exec --no-startup-id gnome-terminal
 
 bindsym $mod+q			    exec --no-startup-id $HOME/scripts/my-i3lock
 bindsym $mod+Shift+q 		kill
@@ -59,7 +59,7 @@ bindsym $mod+Shift+t 		exec --no-startup-id discord
 #bindsym $mod+o			    
 #bindsym $mod+Shift+o 		
 
-bindsym $mod+p			    exec --no-startup-id maim /tmp/screenshot.png
+bindsym $mod+p			    exec --no-startup-id flameshot gui
 #bindsym $mod+Shift+p 		
 
 #bindsym $mod+a			    
