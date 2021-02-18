@@ -11,3 +11,5 @@ fi
 eval $(ssh-agent)
 
 export TERMINAL='/usr/bin/dbus-launch gnome-terminal'
+
+[[ $(tty) == '/dev/tty1' ]] && startx
