@@ -66,7 +66,7 @@ bindsym $mod+p			    exec --no-startup-id flameshot gui
 #bindsym $mod+Shift+a 		
 
 bindsym $mod+s			    exec --no-startup-id spotify
-#bindsym $mod+Shift+s 		
+bindsym $mod+Shift+s 		exec --no-startup-id pavucontrol
 
 
 # start dmenu (a program launcher)
@@ -87,7 +87,7 @@ bindsym $mod+l 			    focus right
 bindsym $mod+Shift+l 		move right
 
 
-bindsym $mod+b		        exec --no-startup-id firefox
+bindsym $mod+b		        exec --no-startup-id brave-browser
 bindsym $mod+Shift+b	    exec --no-startup-id chromium
 
 # TODO
