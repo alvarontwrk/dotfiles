@@ -7,6 +7,10 @@ if [ -d "$HOME/scripts" ] ; then
     PATH="$HOME/scripts:$PATH"
 fi
 
+if [ -d "$HOME/.gocode/bin" ] ; then
+    PATH="$HOME/.gocode/bin:$PATH"
+fi
+
 # start ssh-agent
 eval $(ssh-agent)
 
