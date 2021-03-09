@@ -28,12 +28,17 @@ separator=false
 
 [wifiname]
 label=📶
-command=/home/alvaro/scripts/wifiname
+command=wifiname
 interval=5
 
 [openvpn]
 label=🌐
-command=/home/alvaro/scripts/get-vpn-ip
+command=get-vpn-ip
+interval=5
+
+[target]
+label=🎯
+command=target-ip
 interval=5
 
 [iface]
