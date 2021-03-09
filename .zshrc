@@ -93,6 +93,7 @@ bindkey '^e' edit-command-line
 # TODO
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+[ -f "$HOME/priv/secretsrc" ] && source "$HOME/priv/secretsrc"
 alias ls='ls --color=auto'
 alias mkcd='. mkcd'
 alias sx='startx'
@@ -112,7 +113,14 @@ config() {
 # Check for dotfiles repo remote url
 configrepo=$(config remote -v)
 
+lnbin() {
+  ln -s $PWD/$1 $HOME/bin
+}
+
 if [[ "$configrepo" == *"https"* ]]; then
   echo "WARNING: Your dotfiles local repo connects to the server through https.\
  Maybe you should change that for ssh"
 fi
+
+export TARGET=$(target-ip)
+export GOPATH=$HOME/.gocode
