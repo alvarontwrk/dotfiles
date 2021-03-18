@@ -129,8 +129,8 @@ fi
 
 # Custom exports
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export GOPATH=/home/alvaro/.gocode
 export BW_SESSION='null'
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
