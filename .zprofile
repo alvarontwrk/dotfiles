@@ -17,3 +17,6 @@ eval $(ssh-agent)
 export TERMINAL='/usr/bin/dbus-launch gnome-terminal'
 
 [[ $(tty) == '/dev/tty1' ]] && startx
+
+# Created by `pipx` on 2021-04-18 20:54:27
+export PATH="$PATH:/home/alvaro/.local/bin"

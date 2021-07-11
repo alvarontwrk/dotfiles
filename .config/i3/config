@@ -87,6 +87,10 @@ bindsym $mod+l 			    focus right
 bindsym $mod+Shift+l 		move right
 
 
+# restart screen
+bindsym $mod+x          exec --no-startup-id xrandr --auto
+#bindsym $mod+Shift+x
+
 bindsym $mod+b		        exec --no-startup-id brave-browser
 bindsym $mod+Shift+b	    exec --no-startup-id chromium
 

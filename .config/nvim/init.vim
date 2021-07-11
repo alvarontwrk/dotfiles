@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline-themes'
 "Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'vim-scripts/indentpython.vim'
 Plug 'preservim/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 filetype plugin indent on
