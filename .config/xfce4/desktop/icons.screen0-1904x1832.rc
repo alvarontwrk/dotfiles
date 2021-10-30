@@ -1,0 +1,15 @@
+[xfdesktop-version-4.10.3+-rcfile_format]
+4.10.3+=true
+
+[Trash]
+row=8
+col=0
+
+[/]
+row=9
+col=0
+
+[/home/alvaro]
+row=10
+col=0
+
