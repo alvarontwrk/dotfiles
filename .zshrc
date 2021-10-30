@@ -50,6 +50,24 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+# apt regex expansion
+unsetopt no_match
+
+# PATH
+
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/scripts" ] ; then
+    PATH="$HOME/scripts:$PATH"
+fi
+
+if [ -d "$HOME/.gocode/bin" ] ; then
+    PATH="$HOME/.gocode/bin:$PATH"
+fi
+
+
 # Speed up disown
 setopt AUTO_CONTINUE
 
@@ -95,16 +113,19 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 [ -f "$HOME/priv/secretsrc" ] && source "$HOME/priv/secretsrc"
 alias ls='ls --color=auto'
+alias sudo='sudo '
 alias mkcd='. mkcd'
 alias sx='startx'
 alias assign="tail -1|tee _T1>/dev/null&&printf \"export \\\$1=\$(cat _T1)\nrm _T*\">_T2&&. _T2"
 alias dai="sudo docker-compose run ejercicios"
 alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | xclip -sel clip'
+alias ncopy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | head -c -1 | xclip -sel clip'
 alias ncat='/usr/bin/cat'
 alias cat='batcat'
 alias vim='nvim'
 alias oscplab='sudo openvpn --config ~/oscp/lab/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
+alias oscpexam='sudo openvpn --config ~/oscp/exam/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 alias htblab='sudo openvpn --config ~/htb/lab_alvarontwrk.ovpn'
 alias academylab='sudo openvpn --config ~/htb/academy.ovpn'
 
@@ -120,9 +141,9 @@ rs-nc() {
   echo "nc -e /bin/sh $1 $2"
 }
 
-find-pt-resource() {
-  find $HOME/pt-resources | grep $1 | sed "s|$HOME/pt-resources|http://$(get-vpn-ip || getip)|g"
-}
+# find-pt-resource() {
+#   find $HOME/pt-resources | grep -i $1 | sed "s|$HOME/pt-resources|http://$(get-vpn-ip || getip)|g"
+# }
 
 config() {
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
@@ -145,3 +166,10 @@ export GOPATH=$HOME/.gocode
 
 # Created by `pipx` on 2021-04-18 20:54:27
 export PATH="$PATH:/home/alvaro/.local/bin"
+
+# oralce sqlplus
+export PATH=$PATH:/home/alvaro/src/oracle/instantclient_21_1
+export SQLPATH=/home/alvaro/src/oracle/instantclient_21_1
+export TNS_ADMIN=/home/alvaro/src/oracle/instantclient_21_1
+export LD_LIBRARY_PATH=/home/alvaro/src/oracle/instantclient_21_1:/usr/lib/jvm/java-17-openjdk-amd64/lib/server
+export ORACLE_HOME=/home/alvaro/src/oracle/instantclient_21_1
