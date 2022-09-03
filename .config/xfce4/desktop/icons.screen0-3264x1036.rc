@@ -5,6 +5,10 @@
 row=4
 col=0
 
+[webdav]
+row=3
+col=0
+
 [Trash]
 row=0
 col=0
