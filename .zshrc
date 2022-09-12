@@ -30,12 +30,12 @@ export MYVIMRC='~/.vimrc'
 # Enable colors and change prompt:
 autoload -U colors && colors
 
-if [[ -n $DISPLAY ]];
-then
-    #PROMPT = (etc)
-else 
-   PS1='$ '
-fi
+#if [[ -n $DISPLAY ]];
+#then
+#    #PROMPT = (etc)
+#else 
+#   PS1='$ '
+#fi
 
 # History in cache directory:
 HISTSIZE=10000
