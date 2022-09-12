@@ -30,6 +30,12 @@ export MYVIMRC='~/.vimrc'
 # Enable colors and change prompt:
 autoload -U colors && colors
 
+if [[ ${SSH_TTY} ]] ; then
+  USE_POWERLINE="false"
+else
+  USE_POWERLINE="true"
+fi
+
 #if [[ -n $DISPLAY ]];
 #then
 #    #PROMPT = (etc)
