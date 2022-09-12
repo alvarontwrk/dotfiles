@@ -30,18 +30,10 @@ export MYVIMRC='~/.vimrc'
 # Enable colors and change prompt:
 autoload -U colors && colors
 
+# Add hostname if SSH
 if [[ ${SSH_TTY} ]] ; then
-  USE_POWERLINE="false"
-else
-  USE_POWERLINE="true"
+  PS1="$HOST $PS1"
 fi
-
-#if [[ -n $DISPLAY ]];
-#then
-#    #PROMPT = (etc)
-#else 
-#   PS1='$ '
-#fi
 
 # History in cache directory:
 HISTSIZE=10000
