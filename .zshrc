@@ -150,12 +150,12 @@ lnbin() {
   ln -s $PWD/$1 $HOME/bin
 }
 
-if [[ "$configrepo" == *"https"* ]]; then
-  echo "WARNING: Your dotfiles local repo connects to the server through https.\
- Maybe you should change that for ssh"
-fi
+#if [[ "$configrepo" == *"https"* ]]; then
+#  echo "WARNING: Your dotfiles local repo connects to the server through https.\
+# Maybe you should change that for ssh"
+#fi
 
-export TARGET=$(target-ip)
+#export TARGET=$(target-ip)
 export GOPATH=$HOME/.gocode
 
 # Created by `pipx` on 2021-04-18 20:54:27
