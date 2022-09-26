@@ -12,7 +12,7 @@ if [ -d "$HOME/.gocode/bin" ] ; then
 fi
 
 # start ssh-agent
-eval $(ssh-agent)
+#eval $(ssh-agent)
 
 export TERMINAL='/usr/bin/dbus-launch gnome-terminal'
 
