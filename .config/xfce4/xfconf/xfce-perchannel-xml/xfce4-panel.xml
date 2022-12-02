@@ -19,8 +19,8 @@
         <value type="int" value="2"/>
         <value type="int" value="3"/>
         <value type="int" value="5"/>
-        <value type="int" value="6"/>
         <value type="int" value="8"/>
+        <value type="int" value="1"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="12"/>
@@ -69,35 +69,10 @@
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-6" type="string" value="systray">
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="system-config-printer"/>
-        <value type="string" value="musixmatch"/>
-        <value type="string" value="discord"/>
-        <value type="string" value="thunar"/>
-        <value type="string" value="flameshot"/>
-        <value type="string" value="xfce4-power-manager"/>
-        <value type="string" value="blueman-tray"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="ibus panel"/>
-        <value type="string" value="bluetooth enabled"/>
-      </property>
-      <property name="known-items" type="array">
-        <value type="string" value="remmina-icon"/>
-        <value type="string" value="obs"/>
-        <value type="string" value="steam"/>
-        <value type="string" value="flameshot"/>
-        <value type="string" value="TeamViewer"/>
-        <value type="string" value="TelegramDesktop"/>
-        <value type="string" value="vlc"/>
-        <value type="string" value="blueman"/>
-      </property>
-    </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance14812;chromium.instance17925;chromium.instance1919;chromium.instance2354;chromium.instance2419;chromium.instance2466;chromium.instance2471;chromium.instance2475;chromium.instance2485;chromium.instance2508;chromium.instance2514;chromium.instance2515;chromium.instance2525;chromium.instance2556;chromium.instance2561;chromium.instance2627;chromium.instance2658;chromium.instance2665;chromium.instance2716;chromium.instance2718;chromium.instance2736;chromium.instance2807;chromium.instance2810;chromium.instance2856;chromium.instance2861;chromium.instance2880;chromium.instance2887;chromium.instance2888;chromium.instance2898;chromium.instance2906;chromium.instance2907;chromium.instance2909;chromium.instance2912;chromium.instance2922;chromium.instance2926;chromium.instance2932;chromium.instance2934;chromium.instance2941;chromium.instance2955;chromium.instance2957;chromium.instance2964;chromium.instance2967;chromium.instance2982;chromium.instance3026;chromium.instance3037;chromium.instance3066;chromium.instance3101;chromium.instance3246;chromium.instance3265;chromium.instance3316;chromium.instance3324;chromium.instance3470;chromium.instance3480;chromium.instance3481;chromium.instance3486;chromium.instance3529;chromium.instance3562;chromium.instance3576;chromium.instance35996;chromium.instance3613;chromium.instance3642;chromium.instance3666;chromium.instance3676;chromium.instance3767;chromium.instance3793;chromium.instance3804;chromium.instance3871;chromium.instance4000;chromium.instance4070;chromium.instance4075;chromium.instance4177;chromium.instance4181;chromium.instance4204;chromium.instance4230;chromium.instance4342;chromium.instance4363;chromium.instance4369;chromium.instance4529;chromium.instance4571;chromium.instance4616;chromium.instance4648;chromium.instance4761;chromium.instance4867;chromium.instance4945;chromium.instance4957;chromium.instance5018;chromium.instance5088;chromium.instance5387;chromium.instance5433;chromium.instance5808;chromium.instance6739;chromium.instance7714;chromium.instance8913;spotify;vlc"/>
+      <property name="mpris-players" type="string" value="chromium.instance14812;chromium.instance149219;chromium.instance17925;chromium.instance1919;chromium.instance2354;chromium.instance2381;chromium.instance2419;chromium.instance2436;chromium.instance2466;chromium.instance2471;chromium.instance2475;chromium.instance2485;chromium.instance2501;chromium.instance2508;chromium.instance2514;chromium.instance2515;chromium.instance2524;chromium.instance2525;chromium.instance2556;chromium.instance2561;chromium.instance2590;chromium.instance2627;chromium.instance2658;chromium.instance2665;chromium.instance2668;chromium.instance2697;chromium.instance2716;chromium.instance2718;chromium.instance2736;chromium.instance2750;chromium.instance2807;chromium.instance2810;chromium.instance2856;chromium.instance2861;chromium.instance2880;chromium.instance2887;chromium.instance2888;chromium.instance2898;chromium.instance2906;chromium.instance2907;chromium.instance2909;chromium.instance2912;chromium.instance2922;chromium.instance2926;chromium.instance2929;chromium.instance2932;chromium.instance2934;chromium.instance2941;chromium.instance2955;chromium.instance2957;chromium.instance2964;chromium.instance2967;chromium.instance2982;chromium.instance3026;chromium.instance3037;chromium.instance3066;chromium.instance3101;chromium.instance3244;chromium.instance3246;chromium.instance3265;chromium.instance3316;chromium.instance3324;chromium.instance3470;chromium.instance3480;chromium.instance3481;chromium.instance3486;chromium.instance3529;chromium.instance3562;chromium.instance3576;chromium.instance35996;chromium.instance3613;chromium.instance3642;chromium.instance3666;chromium.instance3676;chromium.instance3767;chromium.instance3793;chromium.instance3804;chromium.instance3871;chromium.instance4000;chromium.instance4070;chromium.instance4075;chromium.instance4120;chromium.instance4177;chromium.instance4181;chromium.instance4204;chromium.instance4230;chromium.instance4334;chromium.instance4342;chromium.instance4363;chromium.instance4369;chromium.instance4529;chromium.instance4571;chromium.instance4616;chromium.instance4624;chromium.instance4648;chromium.instance4709;chromium.instance4761;chromium.instance4867;chromium.instance4945;chromium.instance4949;chromium.instance4957;chromium.instance4988;chromium.instance5002;chromium.instance5018;chromium.instance5088;chromium.instance5387;chromium.instance5407;chromium.instance5433;chromium.instance5808;chromium.instance6739;chromium.instance6869;chromium.instance7714;chromium.instance8913;spotify;vlc"/>
     </property>
     <property name="plugin-10" type="string" value="notification-plugin"/>
     <property name="plugin-11" type="string" value="separator">
@@ -154,6 +129,30 @@
     </property>
     <property name="plugin-22" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-1" type="string" value="systray">
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="configuring wi-fi network connection “goo.gl/rk2yhl-2g”…"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="wi-fi network connection “goo.gl/rk2yhl” active: goo.gl/rk2yhl (46%)"/>
+        <value type="string" value="vmware-tray"/>
+        <value type="string" value="ethernet network connection “eno1” active"/>
+        <value type="string" value="blueman-tray"/>
+        <value type="string" value="wi-fi network connection “goo.gl/rk2yhl-2g” active: goo.gl/rk2yhl-2g (43%)"/>
+        <value type="string" value="wi-fi network connection “goo.gl/rk2yhl-2g” active: goo.gl/rk2yhl-2g (49%)"/>
+        <value type="string" value="wi-fi network connection “goo.gl/rk2yhl” active: goo.gl/rk2yhl (60%)"/>
+        <value type="string" value="flameshot"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="wi-fi network connection “goo.gl/rk2yhl” active: goo.gl/rk2yhl (43%)"/>
+        <value type="string" value="blueman"/>
+        <value type="string" value="ibus panel"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="vlc"/>
+        <value type="string" value="discord1"/>
+        <value type="string" value="TelegramDesktop"/>
+        <value type="string" value="blueman"/>
+      </property>
     </property>
   </property>
 </channel>
