@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alvaro/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -156,11 +156,16 @@ lnbin() {
 export GOPATH=$HOME/.gocode
 
 # Created by `pipx` on 2021-04-18 20:54:27
-export PATH="$PATH:/home/alvaro/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # oralce sqlplus
-export PATH=$PATH:/home/alvaro/src/oracle/instantclient_21_1
-export SQLPATH=/home/alvaro/src/oracle/instantclient_21_1
-export TNS_ADMIN=/home/alvaro/src/oracle/instantclient_21_1
-export LD_LIBRARY_PATH=/home/alvaro/src/oracle/instantclient_21_1:/usr/lib/jvm/java-17-openjdk-amd64/lib/server
-export ORACLE_HOME=/home/alvaro/src/oracle/instantclient_21_1
+export PATH=$PATH:$HOME/src/oracle/instantclient_21_1
+export SQLPATH=$HOME/src/oracle/instantclient_21_1
+export TNS_ADMIN=$HOME/src/oracle/instantclient_21_1
+export LD_LIBRARY_PATH=$HOME/src/oracle/instantclient_21_1:/usr/lib/jvm/java-17-openjdk-amd64/lib/server
+export ORACLE_HOME=$HOME/src/oracle/instantclient_21_1
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
