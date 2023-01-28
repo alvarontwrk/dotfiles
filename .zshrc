@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -109,7 +109,7 @@ alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | xclip -sel clip'
 alias ncopy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | head -c -1 | xclip -sel clip'
 alias ncat='/usr/bin/cat'
-alias cat='batcat'
+alias cat='bat'
 alias oscplab='sudo openvpn --config ~/oscp/lab/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 alias oscpexam='sudo openvpn --config ~/oscp/exam/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 alias htblab='sudo openvpn --config ~/htb/lab_alvarontwrk.ovpn'
