@@ -114,7 +114,11 @@ alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | xclip -sel clip'
 alias ncopy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | head -c -1 | xclip -sel clip'
 alias ncat='/usr/bin/cat'
-alias cat='bat'
+if (( $+commands[bat] )); then
+  alias cat='bat'
+elif (( $+commands[batcat] )); then
+  alias cat='batcat'
+fi
 alias oscplab='sudo openvpn --config ~/oscp/lab/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 alias oscpexam='sudo openvpn --config ~/oscp/exam/OS-89708-PWK.ovpn --auth-user-pass ~/oscp/lab/auth.txt'
 alias htblab='sudo openvpn --config ~/htb/lab_alvarontwrk.ovpn'
@@ -172,6 +176,8 @@ export LD_LIBRARY_PATH=$HOME/src/oracle/instantclient_21_1:/usr/lib/jvm/java-17-
 export ORACLE_HOME=$HOME/src/oracle/instantclient_21_1
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if (( $+commands[pyenv] )); then
+  export PYENV_ROOT="$HOME/.pyenv"
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
