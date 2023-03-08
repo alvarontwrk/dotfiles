@@ -176,7 +176,7 @@ export LD_LIBRARY_PATH=$HOME/src/oracle/instantclient_21_1:/usr/lib/jvm/java-17-
 export ORACLE_HOME=$HOME/src/oracle/instantclient_21_1
 
 # pyenv
-if [ ! -f $HOME/.pyenv ]; then
+if [ -d $HOME/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
