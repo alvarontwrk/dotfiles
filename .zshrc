@@ -30,6 +30,11 @@ export MYVIMRC='~/.vimrc'
 # Enable colors and change prompt:
 autoload -U colors && colors
 
+# Add root if root
+if [[ ${UID} == "0" ]] ; then
+  PS1="(root) $PS1"
+fi
+
 # Add hostname if SSH
 if [[ ${SSH_TTY} ]] ; then
   PS1="$HOST $PS1"
@@ -118,6 +123,7 @@ alias prun='poetry run'
 alias disable-aslr='echo 0 | sudo tee /proc/sys/kernel/randomize_va_space'
 alias enable-aslr='echo 1 | sudo tee /proc/sys/kernel/randomize_va_space'
 alias pipxg='sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx'
+alias lssh='ssh -J home.0x404.com:9876'
 
 
 rs-mkfifo() {
