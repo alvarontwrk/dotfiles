@@ -118,6 +118,7 @@ alias dai="sudo docker-compose run ejercicios"
 alias gnome-terminal='dbus-launch gnome-terminal'
 alias copy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | xclip -sel clip'
 alias ncopy='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g" | head -c -1 | xclip -sel clip'
+alias uncopy='echo -n "" | copy'
 alias ncat='/usr/bin/cat'
 if (( $+commands[bat] )); then
   alias cat='bat'
@@ -133,6 +134,7 @@ alias disable-aslr='echo 0 | sudo tee /proc/sys/kernel/randomize_va_space'
 alias enable-aslr='echo 1 | sudo tee /proc/sys/kernel/randomize_va_space'
 alias pipxg='sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx'
 alias lssh='ssh -J home.0x404.com:9876'
+alias lsftp='sftp -J home.0x404.com:9876'
 
 
 rs-mkfifo() {
@@ -186,3 +188,5 @@ if [ -d $HOME/.pyenv ]; then
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
+
+export CHROME_EXECUTABLE=/usr/bin/chromium
